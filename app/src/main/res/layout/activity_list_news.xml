@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swyp_layt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:id="@+id/diaglayout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            app:diagonal_angle="4"
+            app:diagonal_direction="left"
+            app:diagonal_position="bottom"
+            >
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/top_article"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/top_writer"
+                    android:layout_gravity="top|left"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginBottom="32dp"
+                    android:textSize="26sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="#A0333639"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/top_articl"
+                        android:layout_gravity="top|left"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginBottom="32dp"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/diaglayt"
+            android:id="@+id/nes_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
